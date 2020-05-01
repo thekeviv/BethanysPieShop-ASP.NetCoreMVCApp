@@ -54,12 +54,6 @@ namespace BethanysPieShop
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGet("/", async context =>
-                {
-                    await Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(context.Response, "Hello World");
-                });
-
-
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
