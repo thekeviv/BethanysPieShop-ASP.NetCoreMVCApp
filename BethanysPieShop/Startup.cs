@@ -26,7 +26,7 @@ namespace BethanysPieShop
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<AppDbContext>(options =>
-            options.UseSqlServer(Configuration.GetConnectionString("DefaultConnectionString")));
+            options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddScoped<IPieRepository, PieRepository>();
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddControllersWithViews();
